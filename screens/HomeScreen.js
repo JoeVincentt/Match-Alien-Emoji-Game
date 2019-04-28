@@ -1,41 +1,27 @@
-// import React from "react";
-// import {
-//   Image,
-//   Platform,
-//   ScrollView,
-//   StyleSheet,
-//   Text,
-//   TouchableOpacity,
-//   View
-// } from "react-native";
-
-// import { MonoText } from "../components/StyledText";
-
-// export default class HomeScreen extends React.Component {
-//   render() {
-//     return (
-//       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-//         <MonoText>Hello</MonoText>
-//       </View>
-//     );
-//   }
-// }
 import React, { Component } from "react";
-import { View, Text, Button, FlatList, Alert } from "react-native";
-import { FontAwesome, Entypo } from "@expo/vector-icons";
+import {
+  View,
+  Text,
+  Button,
+  FlatList,
+  Alert,
+  ImageBackground
+} from "react-native";
 
 import Score from "../components/Score";
 import Card from "../components/Card";
 
 import shuffleArray from "../utils/shuffleArray";
 
-import cards_data from "../data/images";
+import cards_data from "../data/twentyTiles";
 
 export default class Game extends Component {
   state = {
     current_selection: [],
     selected_pairs: [],
-    score: 0
+    score: 0,
+    scoreToWin: "to do////",
+    picColumns: "to do////"
   };
 
   componentWillMount() {
@@ -49,7 +35,6 @@ export default class Game extends Component {
       card.id = id;
       card.is_open = false;
     });
-
     this.cards = shuffleArray(this.cards);
   }
 
@@ -63,7 +48,11 @@ export default class Game extends Component {
     let contents = this.state.cards;
 
     return (
-      <View style={{ flex: 1, justifyContent: "center" }}>
+      <ImageBackground
+        source={require("../assets/images/background.png")}
+        imageStyle={{ resizeMode: "cover" }}
+        style={{ flex: 1, justifyContent: "center" }}
+      >
         <View style={{ marginTop: 150 }}>
           <FlatList
             data={contents}
@@ -74,7 +63,7 @@ export default class Game extends Component {
           />
         </View>
         <Score score={this.state.score} />
-      </View>
+      </ImageBackground>
     );
   }
 

@@ -19,6 +19,7 @@ const styles = {
   },
   score: {
     fontSize: 40,
-    fontWeight: "bold"
+    fontWeight: "bold",
+    color: "white"
   }
 };

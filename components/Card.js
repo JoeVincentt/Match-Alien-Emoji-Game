@@ -1,15 +1,11 @@
 import React from "react";
 import {
   StyleSheet,
-  Text,
   View,
-  TouchableHighlight,
-  TouchableOpacity,
   TouchableWithoutFeedback,
-  Animated,
-  Image
+  Animated
 } from "react-native";
-import { FontAwesome } from "@expo/vector-icons";
+import { width, height } from "../constants/Layout";
 
 export default class Card extends React.Component {
   state = {
@@ -70,8 +66,12 @@ export default class Card extends React.Component {
           underlayColor={"#f1f1f1"}
         >
           <Animated.Image
-            style={[{ width: 50, height: 50 }, frontAnimatedStyle]}
+            style={[
+              { width: width * 0.2, height: height * 0.15 },
+              frontAnimatedStyle
+            ]}
             source={image_source}
+            resizeMode="contain"
           />
         </TouchableWithoutFeedback>
       </View>
