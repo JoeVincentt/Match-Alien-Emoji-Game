@@ -46,7 +46,12 @@ export default class App extends React.Component {
         require("./assets/images/alienemoji/12.png"),
         require("./assets/images/alienemoji/13.png"),
         require("./assets/images/alienemoji/14.png"),
-        require("./assets/images/alienemoji/15.png")
+        require("./assets/images/alienemoji/15.png"),
+        require("./assets/sounds/background.wav"),
+        require("./assets/sounds/click.wav"),
+        require("./assets/sounds/clickreg.wav"),
+
+        require("./assets/sounds/success.wav")
       ]),
       Font.loadAsync({
         // This is the font that we are using for our tab bar

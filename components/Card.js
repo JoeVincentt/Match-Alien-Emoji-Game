@@ -6,6 +6,7 @@ import {
   Animated
 } from "react-native";
 import { width, height } from "../constants/Layout";
+import { soundPlay } from "../utils/sound";
 
 export default class Card extends React.Component {
   state = {
@@ -26,6 +27,7 @@ export default class Card extends React.Component {
   }
 
   flipCard() {
+    soundPlay(require("../assets/sounds/clickreg.wav"));
     if (this.value >= 90) {
       Animated.spring(this.animatedValue, {
         toValue: 0,
@@ -67,7 +69,7 @@ export default class Card extends React.Component {
         >
           <Animated.Image
             style={[
-              { width: width * 0.2, height: height * 0.15 },
+              { width: width * 0.15, height: height * 0.1 },
               frontAnimatedStyle
             ]}
             source={image_source}

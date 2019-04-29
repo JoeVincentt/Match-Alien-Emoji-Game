@@ -1,19 +1,18 @@
 import React from "react";
 import { Platform } from "react-native";
-import {
-  createStackNavigator,
-  createBottomTabNavigator
-} from "react-navigation";
+import { createStackNavigator } from "react-navigation";
 
-import HomeScreen from "../screens/HomeScreen";
+import GameScreen from "../screens/GameScreen";
+import LandingScreen from "../screens/LandingScreen";
 
-const HomeStack = createStackNavigator(
+const GameStack = createStackNavigator(
   {
-    Home: HomeScreen
+    Landing: LandingScreen,
+    Game: GameScreen
   },
   {
     headerMode: "none"
   }
 );
 
-export default HomeStack;
+export default GameStack;
