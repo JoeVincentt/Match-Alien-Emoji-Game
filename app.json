@@ -4,32 +4,28 @@
     "slug": "MatchGameAlientEmoji",
     "privacy": "public",
     "sdkVersion": "32.0.0",
-    "platforms": [
-      "ios",
-      "android"
-    ],
-    "version": "1.0.0",
+    "platforms": ["ios", "android"],
+    "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "cover",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000"
     },
     "updates": {
-      "fallbackToCacheTimeout": 10000,
+      "fallbackToCacheTimeout": 0,
       "enabled": true,
       "checkAutomatically": "ON_LOAD"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.jvmastery.matchgamealienemoji"
     },
     "android": {
-      "package": "com.jvmastery.matchgamealienemoji"
+      "package": "com.jvmastery.matchgamealienemoji",
+      "versionCode": 2
     },
     "description": "Match Alien Emoji by flipping card and memorizing where what emoji is.\n\nFive difficulty levels are available and no time limit.\n\nTrain your memory, concentration, accuracy, attention, the speed of thinking and logic skill. This game is a great way to exercise your mind and keep your brain fit!"
   }
